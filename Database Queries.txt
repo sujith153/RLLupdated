@@ -1,0 +1,130 @@
+AdminAttendence table
+
+ create table AdminAttendence(
+emp_id int,
+emp_name varchar(30),
+email varchar(30),
+date date(30),
+status varchar(30),
+Foreign Key(emp_id) REFERENCES employees(emp_id)
+);
+
+admin_leave table
+
+create table admin_leave(
+emp_id int(30),
+from_date varchar(30),
+to_date varchar(30),
+leave_type varchar(30),
+reason varchar(30),
+status varchar(30),
+Foreign Key(emp_id) REFERENCES employees(emp_id)
+);
+
+admin salary table
+
+create table admin_salary(
+emp_id int(30),
+emp_name varchar(30),
+basic_pay varchar(30),
+deductions varchar(30),
+net_pay varchar(30),
+month varchar(30),
+Foreign Key(emp_id) REFERENCES employees(emp_id)
+);
+
+employee work sechdule table
+
+create table employeework_sechdule(
+emp_id int(30) ,
+work_date varchar(30),
+work_time int(30),
+work_shift varchar(30),
+work_status varchar(30),
+Foreign Key(emp_id) REFERENCES employees(emp_id)
+);
+
+change password table
+
+create table change_password(
+emp_id int(30) ,
+old_password varchar(30),
+new_password varchar(30),
+confirm_password varchar (30),
+Foreign Key(emp_id) REFERENCES employees(emp_id)
+);
+
+employees table
+
+create table employees(
+emp_id int(30) PRIMARY KEY,
+emp_name varchar(30),
+date_of_joining varchar(30),
+gender varchar(30),
+age int(30),
+designation varchar(30),
+email varchar(30),
+password varchar(30)
+);
+
+
+employee attendence table
+
+create table employee_attendence(
+emp_id int(30),
+emp_name varchar(30),
+email varchar(30),
+date  varchar(30),
+status varchar(30)
+Foreign Key(emp_id) REFERENCES employees(emp_id)
+);
+
+employee leave table
+
+create table employee_leave(
+emp_id int(30),
+from_date varchar(30),
+to_date varchar(30),
+leave_type varchar(30),
+reason varchar(30),
+status varchar(30),
+Foreign Key(emp_id) REFERENCES employees(emp_id)
+);
+
+employee salary table 
+
+create table employee_salary(
+emp_id int(30) ,
+emp_name varchar(30),
+basic_pay varchar(30),
+deductions varchar (30),
+net_pay varchar(30),
+month varchar(30),
+Foreign Key(emp_id) REFERENCES employees(emp_id)
+);
+
+admin work sechdule table
+
+create table adminwork_sechdule(
+emp_id int(30),
+work_date varchar(30),
+work_time int(30),
+work_shift varchar(30),
+work_status varchar(30),
+Foreign Key(emp_id) REFERENCES employees(emp_id)
+);
+
+
+update profile table
+
+create table update_profile(
+emp_id int(30),
+emp_name varchar(30),
+date_of_joining varchar(30),
+gender varchar(30),
+age int(30),
+designation varchar(30),
+email varchar(30),
+password varchar(30),
+Foreign Key(emp_id) REFERENCES employees(emp_id)
+);
